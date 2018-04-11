@@ -1,5 +1,7 @@
 import java.lang.*;
 
+package mx.itam.adsi.ejemplo;
+
 public class Aritmetico{
 
 	public Aritmetico(){
@@ -13,4 +15,5 @@ public class Aritmetico{
 	public int abs(int a){
 		return Math.abs(a);
 	}
+
 }
