@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>mx.com.itam.adsi</groupId>
+  <groupId>mx.itam.adsi.ejemplo</groupId>
   <artifactId>ejemplo</artifactId>
-  <name>ejercicio1</name>
-  <version>1.0-SNAPSHOT</version>
-  <description>Proyecto "de ejemplo"</description>
-  <url>http://adsi.itam.com.mx</url>
-  <inceptionYear>7018</inceptionYear>
+  <name>sample</name>
+  <version>1.0.0-SNAPSHOT</version>
   <build>
     <plugins>
       <plugin>
@@ -31,113 +28,15 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>mx.com.itam.adsi.ejemplo.Aritmetico</mainClass>
+                  <mainClass>mx.itam.adsi.ejemplo.AritmeticoMain</mainClass>
                 </transformer>
               </transformers>
             </configuration>
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <artifactId>maven-site-plugin</artifactId>
-        <version>3.3</version>
-        <configuration>
-          <reportPlugins>
-            <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-jxr-plugin</artifactId>
-              <version>2.5</version>
-            </plugin>
-            <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-project-info-reports-plugin</artifactId>
-              <version>2.9</version>
-              <reportSets>
-                <reportSet>
-                  <reports>
-                    <report>index</report>
-                    <report>issue-tracking</report>
-                    <report>plugins</report>
-                    <report>cim</report>
-                    <report>license</report>
-                    <report>mailing-list</report>
-                    <report>project-team</report>
-                    <report>plugin-management</report>
-                    <report>summary</report>
-                    <report>project-team</report>
-                    <report>distribution-management</report>
-                  </reports>
-                </reportSet>
-              </reportSets>
-            </plugin>
-            <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-pmd-plugin</artifactId>
-              <version>3.7</version>
-              <configuration>
-                <targetJdk>1.8</targetJdk>
-              </configuration>
-            </plugin>
-            <plugin>
-              <groupId>org.codehaus.mojo</groupId>
-              <artifactId>findbugs-maven-plugin</artifactId>
-              <version>3.0.1</version>
-              <configuration>
-                <effort>Max</effort>
-                <threshold>Low</threshold>
-                <xmlOutput>true</xmlOutput>
-              </configuration>
-            </plugin>
-            <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-checkstyle-plugin</artifactId>
-              <version>2.15</version>
-              <configuration>
-                <configLocation>src/main/resources/custom-checks.xml</configLocation>
-              </configuration>
-              <reportSets>
-                <reportSet>
-                  <reports>
-                    <report>checkstyle</report>
-                  </reports>
-                </reportSet>
-              </reportSets>
-            </plugin>
-            <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-javadoc-plugin</artifactId>
-              <version>2.10.2</version>
-              <configuration>
-                <additionalparam>-Xdoclint:none</additionalparam>
-              </configuration>
-            </plugin>
-          </reportPlugins>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.10.2</version>
-        <executions>
-          <execution>
-            <id>attach-javadocs</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-            <configuration>
-              <additionalparam>-Xdoclint:none</additionalparam>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
     </plugins>
   </build>
-  <repositories>
-    <repository>
-      <id>nexus.kebblar.io-repo</id>
-      <name>Kebblar Repository</name>
-      <url>http://visitanos.net:8081/repository/all/</url>
-    </repository>
-  </repositories>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -152,12 +51,6 @@
       </exclusions>
     </dependency>
   </dependencies>
-  <distributionManagement>
-    <snapshotRepository>
-      <id>nexus.kebblar.io-repo</id>
-      <url>http://visitanos.net:8081/repository/kebblar/</url>
-    </snapshotRepository>
-  </distributionManagement>
   <properties>
     <jersey.version>2.26</jersey.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -1,11 +1,11 @@
-import java.lang.*;
-
 package mx.itam.adsi.ejemplo;
 
-public class Aritmetico{
+import java.lang.*;
+
+public class Aritmetico {
 
 	public Aritmetico(){
-
+	
 	}
 
 	public int min(int a, int b){
