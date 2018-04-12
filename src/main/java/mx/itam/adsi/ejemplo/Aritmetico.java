@@ -17,6 +17,6 @@ public class Aritmetico {
 	}
 
 	public int max(int a, int b){
-		return Math.max(a,b);
+		return (a > b) ? a : b;
 	}
 }
